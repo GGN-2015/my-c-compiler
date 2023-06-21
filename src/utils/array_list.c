@@ -51,6 +51,7 @@ void array_list_destr(ArrayListHead* array_list_head) {
     array_list_head -> length_now = 0;
 }
 
+#ifdef TEST_ARRAY_LIST
 int main() {
     ArrayListHead array_list_head; array_list_init(&array_list_head);
     
@@ -71,3 +72,4 @@ int main() {
     array_list_destr(&array_list_head);
     return 0;   
 }
+#endif
