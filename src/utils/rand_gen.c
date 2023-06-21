@@ -59,9 +59,10 @@ static char __rand_gen_get_ope_name(int rand_gen_ope) {
         case RAND_GEN_EQU: return '=';
         case RAND_GEN_GTR: return '>';
     }
-    assert(false);
+    assert(false); return '\0';
 }
 
+#ifdef TEST_RAND_GEN
 int main() {
     rand_gen_init();                                     // init before_use
     
@@ -76,3 +77,4 @@ int main() {
     
     return 0;   
 }
+#endif
